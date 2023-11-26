@@ -65,13 +65,34 @@ c_1_1 = Consumidor(q_1_1, X=4, CT=6)
 
 #b. Relación 5:2 con PT=1, CT=3 y X=5.
 q_5_2 = queue.Queue()       
-p_5_2 = Productor(q_1_1, PT=1)
-c_5_2 = Consumidor(q_1_1, X=5, CT=3)
+p_5_2 = Productor(q_5_2, PT=1)
+c_5_2 = Consumidor(q_5_2, X=5, CT=3)
 
 #c. Relación 3:10 con PT=3, CT=8 y X=2.
+
+q_3_10 = queue.Queue()       
+p_3_10 = Productor(q_3_10, PT=3)
+c_3_10 = Consumidor(q_3_10, X=2, CT=8)
+
+
+#inicio de hilos
 
 p_1_1.start()
 c_1_1.start()
 
+p_5_2.start()
+c_5_2.start()
+
+p_3_10.start()
+c_3_10.start()
+
+#continuacion y finalizacion de hilos
+
 p_1_1.join()
 c_1_1.join()
+
+p_5_2.join()
+c_5_2.join()
+
+p_3_10.join()
+c_3_10.join()
