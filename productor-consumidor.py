@@ -25,8 +25,6 @@ import random
 import time
 
 
-
-
 class Productor(threading.Thread):
     def __init__(self, queue, PT):
         threading.Thread.__init__(self)
