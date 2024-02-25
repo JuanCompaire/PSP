@@ -1,0 +1,9 @@
+
+smtp port:1025
+ftp port: 21
+ftp user: admin
+ftp password XXXXX
+sh port 2222
+ssh user linuxserver
+ssh password admin
+        
