@@ -1,10 +1,10 @@
 import paramiko
 from scp import SCPClient 
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import AES, PKCS1_OAEP
+from crypto.PublicKey import RSA
+from crypto.Cipher import AES, PKCS1_OAEP
 
 def examen():
-    connectSSH()
+    #connectSSH()
     desEncrypt()
 
 def connectSSH():
